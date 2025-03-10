@@ -5,13 +5,16 @@ import { assets } from '@/assets/assets'
 const Navbar = () => {
   return (
     <div>
+        <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]'>
+            <Image src={assets.header_bg_color} className='w-full'/>
+            </div>
 
-        <nav className='w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between bg-white z-50'>
+        <nav className='w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between  z-50'>
             <a href="">
                 <Image src={assets.logo} className="w-28 cursor-pointer mr-14" alt='logo'/>
             </a>
-            <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3'>
-                <li className="">
+            <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50'>
+                <li className="font-Ovo">
                     <a href="#top" className="text-black">Home</a>
                 </li>
                 <li className="">
@@ -35,6 +38,7 @@ const Navbar = () => {
                 
                 </div>
         </nav>
+       
     </div>
   )
 }
