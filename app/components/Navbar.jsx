@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { use } from 'react'
 import Image from 'next/image'
 import { assets } from '@/assets/assets'
 
 const Navbar = () => {
+
+const sideMenuRef = useRef();
+const openMenu = () => {
+    sideMenuRef.current.style.transform = 'translateX(-16rem)';}
+    
+    const closeMenu = () => {
+        sideMenuRef.current.style.transform = 'translateX(16rem)';}
+        
+
+
+
+
   return (
     <div>
         <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]'>
@@ -49,26 +61,26 @@ const Navbar = () => {
 
        {/* Mobile menu */}         
 
-       <ul className='flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-0 top-0 bottom-0 w-64 z-50 h-screen bg-bl   transition duration-500 '>
+       <ul ref={sideMenuRef}  className='flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-bl   transition duration-500 '>
       
-      <div className='absolute right-6 top-6'>
+      <div className='absolute right-6 top-6' onClick={closeMenu}>
         <Image src={assets.close_black} alt='' className=' w-5 cursor-pointer'/>
       </div>
 
 
-       <li className="font-Ovo">
+       <li className="font-Ovo" onClick={closeMenu} >
                     <a href="#top" className="text-black">Home</a>
                 </li>
-                <li className="">
+                <li className=""onClick={closeMenu}>
                     <a href="about" className="text-black">About me</a>
                 </li>
-                <li className="">
+                <li className=""onClick={closeMenu}>
                     <a href="services" className="text-black">Services</a>
                 </li>
-                <li className="">
+                <li className=""onClick={closeMenu}>
                     <a href="#work" className="text-black">Portfolio</a>
                 </li>
-                <li className="">
+                <li className=""onClick={closeMenu}>
                     <a href="#contact" className="text-black">Contact me</a>   
                 </li>
        </ul>
