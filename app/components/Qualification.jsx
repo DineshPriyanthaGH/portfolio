@@ -13,7 +13,7 @@ const Qualification = () => {
       <div className="flex justify-center gap-20 mt-8">
         <button
           className={`flex items-center gap-2 px-4 py-2 text-lg font-semibold rounded-md ${
-            activeTab === "education" ? "text-green-800 border-b-2 border-blue-600" : "text-gray-500"
+            activeTab === "education" ? "text-green-600 border-b-2 border-green-600" : "text-gray-500"
           }`}
           onClick={() => setActiveTab("education")}
         >
@@ -35,19 +35,19 @@ const Qualification = () => {
           <div className="space-y-6">
             {/* Education Timeline */}
             <div className="flex items-start gap-4">
-              <span className="w-2 h-2 bg-blue-600 rounded-full mt-2"></span>
+              <span className="w-2 h-2 bg-green-600 rounded-full mt-2"></span>
               <div>
-                <h3 className="text-xl font-semibold">BSc in Computer Science</h3>
+                <h3 className="text-xl font-semibold">BSc(Hons) Computing and Information Systems</h3>
                 <p className="text-gray-500">Sabaragamuwa University of Sri Lanka</p>
-                <p className="text-sm text-gray-400">2022 - Present</p>
+                <p className="text-sm text-gray-400">2023 - Present</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <span className="w-2 h-2 bg-blue-600 rounded-full mt-2"></span>
+              <span className="w-2 h-2 bg-green-600 rounded-full mt-2"></span>
               <div>
                 <h3 className="text-xl font-semibold">High School</h3>
-                <p className="text-gray-500">Mahanama College</p>
-                <p className="text-sm text-gray-400">2012 - 2021</p>
+                <p className="text-gray-500">Royal College Polonnaruwa</p>
+                <p className="text-sm text-gray-400">2019 - 2021</p>
               </div>
             </div>
           </div>
@@ -55,18 +55,18 @@ const Qualification = () => {
           <div className="space-y-6">
             {/* Experience Timeline */}
             <div className="flex items-start gap-4">
-              <span className="w-2 h-2 bg-blue-600 rounded-full mt-2"></span>
+              <span className="w-2 h-2 bg-green-600 rounded-full mt-2"></span>
               <div>
-                <h3 className="text-xl font-semibold">Software Engineer Intern</h3>
-                <p className="text-gray-500">DotNet Solutions</p>
+                <h3 className="text-xl font-semibold">UnderGraduate</h3>
+                <p className="text-gray-500">Faculty Of Computing @SUSL</p>
                 <p className="text-sm text-gray-400">2024 - Present</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <span className="w-2 h-2 bg-blue-600 rounded-full mt-2"></span>
+              <span className="w-2 h-2 bg-green-600 rounded-full mt-2"></span>
               <div>
-                <h3 className="text-xl font-semibold">Microsoft Student Ambassador</h3>
-                <p className="text-gray-500">Microsoft</p>
+                <h3 className="text-xl font-semibold">Tech Support Intern</h3>
+                <p className="text-gray-500">GAOTek Inc.</p>
                 <p className="text-sm text-gray-400">2023 - Present</p>
               </div>
             </div>
