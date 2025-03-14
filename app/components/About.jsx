@@ -1,5 +1,9 @@
 import React from 'react'
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { infoList } from '@/assets/assets';
+import Image from 'next/image';
+import { infoList } from '@/assets/assets';
+
 
 const About = () => {
   return (
@@ -8,7 +12,7 @@ const About = () => {
 
       <div className='flex flex-col lg:flex-row items-center gap-20 my-20'>
         {/* Lottie Animation */}
-        <div className='w-200 h-200 flex justify-center items-center'>
+        <div className='w-200 h-200 sm:w-100 sm:h-80 flex justify-center items-center'>
           <DotLottieReact
             src="https://lottie.host/81cbd9f9-ce6c-42ff-8ec5-d7ab90c2d153/JcVq2XUuGO.json"
             loop
@@ -18,7 +22,7 @@ const About = () => {
 
         {/* About Text */}
         <div className='flex-1 text-lg text-gray-700'>
-          <p className='leading-relaxed'>
+          <p className='leading-relaxed mb-10 max-2xl '>
             I am a <span className='text-black font-semibold'>passionate Software Developer</span>  
             dedicated to building innovative and efficient solutions.  
             With experience in <span className='text-black font-semibold'>full-stack development</span>,  
@@ -33,6 +37,15 @@ const About = () => {
             I love tackling <span className='text-black font-semibold'>complex challenges</span>,  
             optimizing performance, and continuously learning to stay ahead in the ever-evolving tech landscape.
           </p>
+          <ul>
+            {infoList.map(({icon,iconDark,title,description,index})=>(
+                <li key={index}>
+              <Image src='icon' alt=''/>
+                </li>
+
+            ))}
+          </ul>
+
         </div>
       </div>
     </div>
