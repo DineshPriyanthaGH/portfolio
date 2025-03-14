@@ -26,12 +26,12 @@ const openMenu = () => {
             <a href="">
                 <Image src={assets.logo} className="w-28 cursor-pointer bg-transparent mr-14" alt='logo'/>
             </a>
-            <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50'>
+            <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opocity-50'>     
                 <li className="font-Ovo">
                     <a href="#top" className="text-black">Home</a>
                 </li>
                 <li className="">
-                    <a href="about" className="text-black">About me</a>
+                    <a href="#about" id='about' className="text-black">About me</a>
                 </li>
                 <li className="">
                     <a href="services" className="text-black">Services</a>
