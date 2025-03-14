@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div id="about" className="w-full px-6 md:px-[10%] py-10 scroll-mt-20">
       {/* Section Title */}
-      <h2 className="text-center text-4xl md:text-5xl font-bold">About Me</h2>
+      <h2 className="text-center text-4xl font-bold">About Me</h2>
 
       <div className="flex flex-col lg:flex-row items-center gap-12 my-16">
         {/* Lottie Animation */}
