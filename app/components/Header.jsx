@@ -20,7 +20,7 @@ const Header = () => {
         <h3 className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo'>Hi I'm Dinesh Priyantha <Image src={assets.hand_icon} className=' w-6' alt=''/> </h3>
         
         
-        <h1 className='text-gray-500  text-3xl sm:text-5xl lg:text-[66px]'>As a  <span className='text-black'>Full Stack Developer
+        <h1 className='text-gray-500 font-bold text-xl sm:text-3xl lg:text-[45px]'>As a  <span className='text-black'>Full Stack Developer
         </span>    
             </h1> 
         
