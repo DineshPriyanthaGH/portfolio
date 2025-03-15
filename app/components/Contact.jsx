@@ -28,7 +28,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="container mx-auto px-6 py-16">
+    <div id="contact" className="container mx-auto px-6 py-16">
       <h2 className="text-3xl font-bold text-center mb-4">Connect with Me</h2>
       <p className="text-center text-gray-600 mb-8">Get in Touch</p>
 
@@ -38,22 +38,29 @@ const Contact = () => {
 
           {/* Left Side: Talk to Me (Hidden on Small Screens) */}
           <div className="hidden md:block">
-            <h3 className="text-2xl font-semibold mb-6">Talk to Me</h3>
-            <div className="flex flex-col gap-4 items-start">
-              <div className="bg-gray-100 shadow-md rounded-lg p-6 flex flex-col items-center w-36 h-36">
-                <FaLinkedin className="text-blue-600 text-5xl" />
-                <h4 className="text-lg font-semibold mt-3">LinkedIn</h4>
-              </div>
-              <div className="bg-gray-100 shadow-md rounded-lg p-6 flex flex-col items-center w-36 h-36">
-                <FaEnvelope className="text-red-500 text-5xl" />
-                <h4 className="text-lg font-semibold mt-3">Email</h4>
-              </div>
-              <div className="bg-gray-100 shadow-md rounded-lg p-6 flex flex-col items-center w-36 h-36">
-                <FaMedium className="text-green-600 text-5xl" />
-                <h4 className="text-lg font-semibold mt-3">Medium</h4>
-              </div>
-            </div>
-          </div>
+  <h3 className="text-2xl font-semibold mb-6">Talk to Me</h3>
+  <div className="flex flex-col gap-4 items-start">
+    
+    {/* LinkedIn */}
+    <a href="https://www.linkedin.com/in/dinesh-priyantha" target="_blank" rel="noopener noreferrer" className="bg-gray-100 shadow-md rounded-lg p-6 flex flex-col items-center w-36 h-36 hover:bg-gray-200 transition">
+      <FaLinkedin className="text-blue-600 text-5xl" />
+      <h4 className="text-lg font-semibold mt-3">LinkedIn</h4>
+    </a>
+
+    {/* Email */}
+    <a href="mailto:dineshpriyantha200248@gmail.com" className="bg-gray-100 shadow-md rounded-lg p-6 flex flex-col items-center w-36 h-36 hover:bg-gray-200 transition">
+      <FaEnvelope className="text-red-500 text-5xl" />
+      <h4 className="text-lg font-semibold mt-3">Email</h4>
+    </a>
+
+    {/* Medium */}
+    <a href="https://medium.com/@dineshpriyantha" target="_blank" rel="noopener noreferrer" className="bg-gray-100 shadow-md rounded-lg p-6 flex flex-col items-center w-36 h-36 hover:bg-gray-200 transition">
+      <FaMedium className="text-green-600 text-5xl" />
+      <h4 className="text-lg font-semibold mt-3">Medium</h4>
+    </a>
+
+  </div>
+</div>
 
           {/* Right Side: Contact Form */}
           <div>
@@ -108,19 +115,27 @@ const Contact = () => {
 
         {/* Contact Icons (Only visible on small screens) */}
         <div className="mt-10 flex justify-center gap-4 md:hidden">
-          <div className="bg-gray-100 shadow-md rounded-lg p-4 flex flex-col items-center w-24 h-24">
-            <FaLinkedin className="text-blue-600 text-3xl" />
-            <h4 className="text-sm font-semibold mt-2">LinkedIn</h4>
-          </div>
-          <div className="bg-gray-100 shadow-md rounded-lg p-4 flex flex-col items-center w-24 h-24">
-            <FaEnvelope className="text-red-500 text-3xl" />
-            <h4 className="text-sm font-semibold mt-2">Email</h4>
-          </div>
-          <div className="bg-gray-100 shadow-md rounded-lg p-4 flex flex-col items-center w-24 h-24">
-            <FaMedium className="text-green-600 text-3xl" />
-            <h4 className="text-sm font-semibold mt-2">Medium</h4>
-          </div>
-        </div>
+  
+  {/* LinkedIn */}
+  <a href="https://www.linkedin.com/in/dinesh-priyantha" target="_blank" rel="noopener noreferrer" className="bg-gray-100 shadow-md rounded-lg p-4 flex flex-col items-center w-24 h-24 hover:bg-gray-200 transition">
+    <FaLinkedin className="text-blue-600 text-3xl" />
+    <h4 className="text-sm font-semibold mt-2">LinkedIn</h4>
+  </a>
+
+  {/* Email */}
+  <a href="mailto:dineshpriyantha200248@gmail.com" className="bg-gray-100 shadow-md rounded-lg p-4 flex flex-col items-center w-24 h-24 hover:bg-gray-200 transition">
+    <FaEnvelope className="text-red-500 text-3xl" />
+    <h4 className="text-sm font-semibold mt-2">Email</h4>
+  </a>
+
+  {/* Medium */}
+  <a href="https://medium.com/@dineshpriyantha" target="_blank" rel="noopener noreferrer" className="bg-gray-100 shadow-md rounded-lg p-4 flex flex-col items-center w-24 h-24 hover:bg-gray-200 transition">
+    <FaMedium className="text-green-600 text-3xl" />
+    <h4 className="text-sm font-semibold mt-2">Medium</h4>
+  </a>
+
+</div>
+
 
       </div>
     </div>

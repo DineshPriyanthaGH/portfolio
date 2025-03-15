@@ -50,7 +50,7 @@ const projects = [
 
 const Portfolio = () => {
   return (
-    <div className="container mx-auto px-4 py-10">
+    <div  id="work" className="container mx-auto px-4 py-10">
       <h2 className="text-3xl font-bold text-center mb-6">Portfolio</h2>
       <p className="text-center text-gray-600 mb-8">Most Recent Work</p>
 
