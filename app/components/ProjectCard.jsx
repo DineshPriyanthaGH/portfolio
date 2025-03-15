@@ -3,7 +3,7 @@ import { FaGithub, FaExternalLinkAlt, FaMedium } from "react-icons/fa";
 
 const ProjectCard = ({ title, description, githubLink, liveDemo, mediumArticle, image }) => {
   return (
-    <div className="flex flex-col items-center bg-white rounded-lg shadow-lg overflow-hidden p-4">
+    <div className="flex flex-col items-center bg-white rounded-lg shadow-lg overflow-hidden p-4 mb-15">
       {/* Project Image */}
       <div className="relative group w-full">
         <img src={image} alt={title} className="w-full h-60 object-cover rounded-lg" />
@@ -44,7 +44,7 @@ const ProjectCard = ({ title, description, githubLink, liveDemo, mediumArticle, 
           rel="noopener noreferrer"
           className="text-black hover:text-black transition"
         >
-          <FaExternalLinkAlt size={22} />
+          <FaExternalLinkAlt size={21} />
         </a>
         <a
           href={mediumArticle}
