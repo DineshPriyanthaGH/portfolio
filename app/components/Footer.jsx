@@ -20,7 +20,7 @@ const Footer = () => {
           <ul className="text-gray-400 text-sm space-y-2">
             <li><a href="#about" className="hover:text-white">About</a></li>
             <li><a href="#portfolio" className="hover:text-white">Portfolio</a></li>
-            <li><a href="#contact" className="hover:text-white">Contact</a></li>
+            <li><a href="#works" className="hover:text-white">Contact</a></li>
           </ul>
         </div>
 
