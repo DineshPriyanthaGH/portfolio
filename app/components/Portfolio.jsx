@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { FaGithub, FaExternalLinkAlt, FaMedium } from "react-icons/fa";
 
 const projects = [
   {
@@ -58,11 +57,15 @@ const Portfolio = () => {
       {/* Swiper Carousel for Project Cards */}
       <Swiper
         modules={[Pagination]}
-        spaceBetween={30}
-        slidesPerView={3} // Show 3 projects at a time
+        spaceBetween={20}
         pagination={{ clickable: true }}
-        loop={true} // Enables infinite sliding
-        grabCursor={true} // Makes swiping smoother
+        loop={true}
+        grabCursor={true}
+        breakpoints={{
+          320: { slidesPerView: 1 }, // Show 1 project on small screens
+          768: { slidesPerView: 2 }, // Show 2 projects on tablets
+          1024: { slidesPerView: 3 }, // Show 3 projects on larger screens
+        }}
       >
         {projects.map((project, index) => (
           <SwiperSlide key={index}>
@@ -75,4 +78,3 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
-
