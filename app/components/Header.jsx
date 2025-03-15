@@ -13,7 +13,7 @@ const Header = () => {
 
 
         <>
-            <Image src={assets.profile_img} className='rounded-full w-32' alt=''/>
+            <Image src={assets.profile_img} className='rounded-full w-40' alt=''/>
             
             
         </>

@@ -6,6 +6,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Qualification from "./components/Qualification";
 import Portfolio from "./components/Portfolio";
+import Contact from "./components/Contact";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
    <Skills/>
    <Qualification/>
    <Portfolio/>
+   <Contact/>
    </>
   );
 }
