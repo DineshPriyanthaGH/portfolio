@@ -22,22 +22,20 @@ const About = () => {
         {/* About Text */}
         <div className="flex-1 text-gray-700 text-justify">
           <p className="leading-relaxed mb-6 text-lg sm:text-xl max-w-3xl lg:text-left">
-            I am a <span className="text-black font-semibold">Full-Stack Developer</span> specializing in
-            <span className="text-black font-semibold"> web and mobile app development</span>,
-            <span className="text-black font-semibold"> AI & Machine Learning</span>, and
-            <span className="text-black font-semibold"> scalable system architecture</span>. Passionate about
-            building cutting-edge digital solutions, I focus on delivering high-performance, user-friendly,
-            and efficient applications.
+            I am a <span className="text-black font-semibold">Full-Stack Developer & DevOps Enthusiast</span>  
+            with a passion for building innovative web and mobile applications. My experience spans across  
+            <span className="text-black font-semibold"> web & app development</span>,  
+            <span className="text-black font-semibold"> AI/ML solutions</span>, and  
+            <span className="text-black font-semibold"> cloud technologies</span>.
           </p>
 
           <p className="leading-relaxed text-lg sm:text-xl text-center lg:text-left">
-            My expertise spans <span className="text-black font-semibold">front-end and back-end development</span>,
-            leveraging <span className="text-black font-semibold">React.js, Next.js, Python, and Java</span> to
-            build seamless and interactive user experiences. I also specialize in
-            <span className="text-black font-semibold"> AI/ML model training</span> using Python and
-            <span className="text-black font-semibold"> cloud computing</span> for scalable deployments.
-            With a strong foundation in <span className="text-black font-semibold">UI/UX design</span>, I ensure
-            intuitive and visually engaging applications.
+            I have a strong background in <span className="text-black font-semibold">frontend & backend development</span>,  
+            <span className="text-black font-semibold"> DevOps practices</span>, and  
+            <span className="text-black font-semibold"> cloud computing</span>.  
+            I enjoy working on <span className="text-black font-semibold">automation</span>,  
+            optimizing performance, and implementing <span className="text-black font-semibold">CI/CD pipelines</span>  
+            to streamline development workflows.
           </p>
 
           {/* Skills / Info List */}
@@ -57,4 +55,6 @@ const About = () => {
 };
 
 export default About;
+
+
 
