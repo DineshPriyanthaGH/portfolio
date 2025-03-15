@@ -32,7 +32,7 @@ const Navbar = () => {
         <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50'>
           <li className='font-Ovo'><a href='#top' className='text-black'>Home</a></li>
           <li><a href='#about' className='text-black'>About me</a></li>
-          <li><a href='#services' className='text-black'>Services</a></li>
+          <li><a href='#skills' className='text-black'>Skills</a></li>
           <li><a href='#work' className='text-black'>Portfolio</a></li>
           <li><a href='#contact' className='text-black'>Contact me</a></li>
         </ul>
@@ -57,7 +57,7 @@ const Navbar = () => {
           </div>
           <li className='font-Ovo' onClick={closeMenu}><a href='#top' className='text-black'>Home</a></li>
           <li onClick={closeMenu}><a href='#about' className='text-black'>About me</a></li>
-          <li onClick={closeMenu}><a href='#services' className='text-black'>Services</a></li>
+          <li onClick={closeMenu}><a href='#skills' className='text-black'>Skills</a></li>
           <li onClick={closeMenu}><a href='#work' className='text-black'>Portfolio</a></li>
           <li onClick={closeMenu}><a href='#contact' className='text-black'>Contact me</a></li>
         </ul>
