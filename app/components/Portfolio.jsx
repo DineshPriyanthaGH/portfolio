@@ -4,15 +4,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import { assets } from '@/assets/assets';
+
 
 const projects = [
   {
-    title: "Project One",
-    description: "A cool web app built with React.",
+    title: "FinMentor One",
+    description: "Smart Expense Tracker Web Application.",
     githubLink: "https://github.com/yourusername/project-one",
     liveDemo: "https://yourproject-live.com",
     mediumArticle: "https://medium.com/@yourusername/project-one",
-    image: "https://via.placeholder.com/300",
+    image: "assets/finmentor.png",
   },
   {
     title: "Project Two",
