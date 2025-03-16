@@ -14,7 +14,7 @@ const projects = [
     githubLink: "https://github.com/yourusername/project-one",
     liveDemo: "https://yourproject-live.com",
     mediumArticle: "https://medium.com/@yourusername/project-one",
-    image: "assets/finmentor.png",
+    image: "https://github.com/DineshPriyanthaGH/DineshPriyanthaGH.github.io/blob/main/finmentor.png",
   },
   {
     title: "Project Two",
