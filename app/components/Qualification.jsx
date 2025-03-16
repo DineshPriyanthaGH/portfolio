@@ -1,8 +1,27 @@
 import React, { useState } from "react";
 import { FaGraduationCap, FaBriefcase, FaHandsHelping } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
 
 const Qualification = () => {
   const [activeTab, setActiveTab] = useState("education");
+
+  const sections = {
+    education: [
+      { title: "BSc(Hons) Computing and Information Systems", place: "Sabaragamuwa University of Sri Lanka", year: "2023 - Present" },
+      { title: "High School", place: "Royal College Polonnaruwa", year: "2019 - 2021" }
+    ],
+    experience: [
+      { title: "Undergraduate", place: "Faculty Of Computing @SUSL", year: "2024 - Present" },
+      { title: "Tech Support Intern", place: "GAOTek Inc.", year: "2023 - Present" }
+    ],
+    volunteering: [
+      { title: "Microsoft Learn Student Ambassador", place: "Microsoft", year: "2024 - Present" },
+      { title: "Google Crowdsource Contributor", place: "Google", year: "2023 - Present" }
+    ]
+  };
 
   return (
     <div id="qualification" className="w-full px-6 md:px-[10%] py-16 bg-gray-50">
@@ -10,103 +29,57 @@ const Qualification = () => {
       <p className="text-center text-gray-600 text-lg mt-2">My personal journey</p>
 
       {/* Tabs */}
-      <div className="flex justify-center gap-10 mt-8">
-        <button
-          className={`flex items-center gap-2 px-4 py-2 text-lg font-semibold rounded-md ${
-            activeTab === "education" ? "text-green-600 border-b-2 border-green-600" : "text-gray-500"
-          }`}
-          onClick={() => setActiveTab("education")}
-        >
-          <FaGraduationCap /> Education
-        </button>
-        <button
-          className={`flex items-center gap-2 px-4 py-2 text-lg font-semibold rounded-md ${
-            activeTab === "experience" ? "text-green-600 border-b-2 border-green-600" : "text-gray-500"
-          }`}
-          onClick={() => setActiveTab("experience")}
-        >
-          <FaBriefcase /> Experience
-        </button>
-        <button
-          className={`flex items-center gap-2 px-4 py-2 text-lg font-semibold rounded-md ${
-            activeTab === "volunteering" ? "text-green-600 border-b-2 border-green-600" : "text-gray-500"
-          }`}
-          onClick={() => setActiveTab("volunteering")}
-        >
-          <FaHandsHelping /> Volunteering
-        </button>
+      <div className="flex flex-wrap justify-center gap-6 md:gap-12 mt-8">
+        {[
+          { id: "education", label: "Education", icon: <FaGraduationCap /> },
+          { id: "experience", label: "Experience", icon: <FaBriefcase /> },
+          { id: "volunteering", label: "Volunteering", icon: <FaHandsHelping /> }
+        ].map((tab) => (
+          <button
+            key={tab.id}
+            className={`flex items-center gap-2 px-4 py-2 text-lg font-semibold rounded-md ${
+              activeTab === tab.id ? "text-green-600 border-b-2 border-green-600" : "text-gray-500"
+            }`}
+            onClick={() => setActiveTab(tab.id)}
+          >
+            {tab.icon} {tab.label}
+          </button>
+        ))}
       </div>
 
       {/* Qualification Timeline */}
-      <div className="mt-12 flex justify-center">
-        {activeTab === "education" ? (
-          <div className="space-y-6">
-            <div className="flex items-start gap-4">
+      <div className="mt-12 flex flex-col items-center w-full">
+        {/* Desktop View */}
+        <div className="hidden md:block space-y-6 max-w-lg w-full">
+          {sections[activeTab].map((item, index) => (
+            <div key={index} className="flex items-start gap-4">
               <span className="w-2 h-2 bg-green-600 rounded-full mt-2"></span>
               <div>
-                <h3 className="text-xl font-semibold">BSc(Hons) Computing and Information Systems</h3>
-                <p className="text-gray-500">Sabaragamuwa University of Sri Lanka</p>
-                <p className="text-sm text-gray-400">2023 - Present</p>
+                <h3 className="text-xl font-semibold">{item.title}</h3>
+                <p className="text-gray-500">{item.place}</p>
+                <p className="text-sm text-gray-400">{item.year}</p>
               </div>
             </div>
-            <div className="flex items-start gap-4">
-              <span className="w-2 h-2 bg-green-600 rounded-full mt-2"></span>
-              <div>
-                <h3 className="text-xl font-semibold">High School</h3>
-                <p className="text-gray-500">Royal College Polonnaruwa</p>
-                <p className="text-sm text-gray-400">2019 - 2021</p>
-              </div>
-            </div>
-          </div>
-        ) : activeTab === "experience" ? (
-          <div className="space-y-6">
-            <div className="flex items-start gap-4">
-              <span className="w-2 h-2 bg-green-600 rounded-full mt-2"></span>
-              <div>
-                <h3 className="text-xl font-semibold">UnderGraduate</h3>
-                <p className="text-gray-500">Faculty Of Computing @SUSL</p>
-                <p className="text-sm text-gray-400">2024 - Present</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <span className="w-2 h-2 bg-green-600 rounded-full mt-2"></span>
-              <div>
-                <h3 className="text-xl font-semibold">Tech Support Intern</h3>
-                <p className="text-gray-500">GAOTek Inc.</p>
-                <p className="text-sm text-gray-400">2023 - Present</p>
-              </div>
-            </div>
-          </div>
-        ) : (
-          <div className="space-y-6">
-            <div className="flex items-start gap-4">
-              <span className="w-2 h-2 bg-green-600 rounded-full mt-2"></span>
-              <div>
-                <h3 className="text-xl font-semibold">
-                Technical Activities Commitee | IEEE WIE SL SAC</h3>
-                <p className="text-gray-500">IEEE WIE Srilanka Section</p>
-                <p className="text-sm text-gray-400">Mar 2025 - Present </p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <span className="w-2 h-2 bg-green-600 rounded-full mt-2"></span>
-              <div>
-                <h3 className="text-xl font-semibold">Organizer Committee Member | VisionX</h3>
-                <p className="text-gray-500">IEEE WIE Student Branch Affinity Group of SUSL</p>
-                <p className="text-sm text-gray-400">May 2024 - Present</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <span className="w-2 h-2 bg-green-600 rounded-full mt-2"></span>
-              <div>
-                <h3 className="text-xl font-semibold">
-                Volunteer</h3>
-                <p className="text-gray-500">IEEE Student Branch of SUSL</p>
-                <p className="text-sm text-gray-400">Jul 2023 - Present </p>
-              </div>
-            </div>
-          </div>
-        )}
+          ))}
+        </div>
+
+        {/* Mobile View - Swiper */}
+        <div className="block md:hidden w-full">
+          <Swiper
+            modules={[Pagination]}
+            spaceBetween={20}
+            slidesPerView={1}
+            pagination={{ clickable: true }}
+          >
+            {sections[activeTab].map((item, index) => (
+              <SwiperSlide key={index} className="p-6 bg-white rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold">{item.title}</h3>
+                <p className="text-gray-500">{item.place}</p>
+                <p className="text-sm text-gray-400">{item.year}</p>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </div>
   );
