@@ -18,8 +18,10 @@ const Qualification = () => {
       { title: "Tech Support Intern", place: "GAOTek Inc.", year: "2023 - Present" }
     ],
     volunteering: [
-      { title: "Microsoft Learn Student Ambassador", place: "Microsoft", year: "2024 - Present" },
-      { title: "Google Crowdsource Contributor", place: "Google", year: "2023 - Present" }
+      { title: "Technical Activities Commitee | IEEE WIE SL SAC", place: "IEEE WIE Srilanka Section", year: "Mar 2025 - Present" },
+      { title: "Organizer Committee Member | VisionX", place: "IEEE WIE Student Branch Affinity Group of SUSL", year: "May 2024 - Present" },
+      { title: "Volunteer", place: "IEEE Student Branch of SUSL", year: "Jul 2023 - Present" }
+
     ]
   };
 
