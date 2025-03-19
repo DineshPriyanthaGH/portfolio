@@ -4,17 +4,18 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { assets } from '@/assets/assets';
+
+import { assets } from './../../assets/assets';
 
 
 const projects = [
   {
-    title: "FinMentor One",
+    title: "FinMentor",
     description: "Smart Expense Tracker Web Application.",
-    githubLink: "https://github.com/yourusername/project-one",
-    liveDemo: "https://yourproject-live.com",
+    githubLink: "https://github.com/DineshPriyanthaGH/finmentor-ai-powered-expense-tracker",
+    liveDemo: "https://finmentor-ai-powered-expense-tracker-6yd1.vercel.app/",
     mediumArticle: "https://medium.com/@yourusername/project-one",
-    image: "https://github.com/DineshPriyanthaGH/DineshPriyanthaGH.github.io/blob/main/finmentor.png",
+    image: "./assets/work-1.png",
   },
   {
     title: "Project Two",
