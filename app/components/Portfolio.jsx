@@ -15,7 +15,7 @@ const projects = [
     githubLink: "https://github.com/DineshPriyanthaGH/finmentor-ai-powered-expense-tracker",
     liveDemo: "https://finmentor-ai-powered-expense-tracker-6yd1.vercel.app/",
     mediumArticle: "https://medium.com/@yourusername/project-one",
-    image: "./assets/work-1.png",
+    image: "/assets/work-1.png",
   },
   {
     title: "Project Two",
