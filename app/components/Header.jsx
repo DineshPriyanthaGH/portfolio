@@ -20,36 +20,7 @@ const Header = () => {
     
     <div id="top" className="w-11/12 max-w-3xl mx-auto text-center h-screen flex flex-col items-center justify-center gap-4">
          {/* Social Media Sidebar */}
-         <div className="fixed left-0 top-1/3 flex flex-col gap-4">
-        {socialLinks.map((item) => (
-          <motion.a
-            key={item.id}
-            href={item.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 group"
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: item.id * 0.2 }}
-          >
-            {/* Hidden Text (Appears on Hover) */}
-            <motion.span
-              className="text-white bg-black px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-300"
-              initial={{ x: -50, opacity: 0 }}
-              whileHover={{ x: 0, opacity: 1 }}
-            >
-              {item.name}
-            </motion.span>
-            {/* Icon */}
-            <motion.div
-              className="text-white bg-gray-800 p-3 rounded-full text-xl hover:bg-blue-500 transition-all duration-300"
-              whileHover={{ scale: 1.2 }}
-            >
-              {item.icon}
-            </motion.div>
-          </motion.a>
-        ))}
-      </div>
+         
       {/* Profile Image */}
       <Image src={assets.profile_img} className="rounded-full w-40" alt="Profile Picture" />
 
