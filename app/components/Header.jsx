@@ -13,6 +13,7 @@ const socialLinks = [
   { id: 3, name: "Twitter", icon: <FaTwitter />, link: "https://twitter.com/yourusername" },
   { id: 4, name: "Instagram", icon: <FaInstagram />, link: "https://instagram.com/yourusername" },
 ];
+ 
 
 const Header = () => {
   return (

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { assets } from "@/assets/assets";
-import { FaFacebookF, FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
+import { FaMedium, FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
 
 /* Bubble Background Component */
 const BubbleBackground = () => {
@@ -155,12 +155,13 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
+      
 
       {/* Social Media Links */}
       <div className="fixed left-5 top-1/2 transform -translate-y-1/2 flex flex-col gap-4 z-50">
-        <SocialLink href="https://facebook.com" icon={<FaFacebookF />} label="Facebook" />
-        <SocialLink href="https://linkedin.com" icon={<FaLinkedinIn />} label="LinkedIn" />
-        <SocialLink href="https://github.com" icon={<FaGithub />} label="GitHub" />
+        <SocialLink href="https://medium.com/@dineshpriyantha" icon={<FaMedium />} label="Medium" />
+        <SocialLink href="https://www.linkedin.com/in/dinesh-priyantha" icon={<FaLinkedinIn />} label="LinkedIn" />
+        <SocialLink href="https://github.com/DineshPriyanthaGH" icon={<FaGithub />} label="GitHub" />
         <SocialLink href="https://twitter.com" icon={<FaTwitter />} label="Twitter" />
       </div>
     </div>
