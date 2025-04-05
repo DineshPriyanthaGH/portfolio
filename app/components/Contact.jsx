@@ -1,5 +1,8 @@
+"use client"; // Ensure this is a client component in Next.js 13+
+
 import React, { useState } from "react";
 import { FaLinkedin, FaEnvelope, FaMedium } from "react-icons/fa";
+import { motion } from "framer-motion"; // Import Framer Motion for animations
 
 const Contact = () => {
   const [result, setResult] = useState("");
@@ -29,41 +32,62 @@ const Contact = () => {
 
   return (
     <div id="contact" className="container mx-auto px-6 py-16">
-      <h2 className="text-3xl font-bold text-center mb-4">Connect with Me</h2>
+      <motion.h2
+        className="text-xl sm:text-3xl lg:text-[45px] font-bold text-center mb-4"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        CONNECT WITH ME
+      </motion.h2>
       <p className="text-center text-gray-600 mb-8">Get in Touch</p>
 
-      {/* Main Card Section */}
-      <div className="bg-white shadow-lg rounded-lg p-8 md:p-12 max-w-4xl mx-auto">
+      {/* Main Card Section with Animation */}
+      <motion.div
+        className="bg-white shadow-lg rounded-lg p-8 md:p-12 max-w-4xl mx-auto"
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+      >
         <div className="grid md:grid-cols-2 gap-0 items-start">
 
           {/* Left Side: Talk to Me (Hidden on Small Screens) */}
-          <div className="hidden md:block">
-  <h3 className="text-2xl font-semibold mb-6">Talk to Me</h3>
-  <div className="flex flex-col gap-4 items-start">
-    
-    {/* LinkedIn */}
-    <a href="https://www.linkedin.com/in/dinesh-priyantha" target="_blank" rel="noopener noreferrer" className="bg-gray-100 shadow-md rounded-lg p-6 flex flex-col items-center w-36 h-36 hover:bg-gray-200 transition">
-      <FaLinkedin className="text-blue-600 text-5xl" />
-      <h4 className="text-lg font-semibold mt-3">LinkedIn</h4>
-    </a>
+          <motion.div
+            className="hidden md:block"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <h3 className="text-2xl font-semibold mb-6">Talk to Me</h3>
+            <div className="flex flex-col gap-4 items-start">
+              
+              {/* LinkedIn */}
+              <a href="https://www.linkedin.com/in/dinesh-priyantha" target="_blank" rel="noopener noreferrer" className="bg-gray-100 shadow-md rounded-lg p-6 flex flex-col items-center w-36 h-36 hover:bg-gray-200 transition">
+                <FaLinkedin className="text-blue-600 text-5xl" />
+                <h4 className="text-lg font-semibold mt-3">LinkedIn</h4>
+              </a>
 
-    {/* Email */}
-    <a href="mailto:dineshpriyantha200248@gmail.com" className="bg-gray-100 shadow-md rounded-lg p-6 flex flex-col items-center w-36 h-36 hover:bg-gray-200 transition">
-      <FaEnvelope className="text-red-500 text-5xl" />
-      <h4 className="text-lg font-semibold mt-3">Email</h4>
-    </a>
+              {/* Email */}
+              <a href="mailto:dineshpriyantha200248@gmail.com" className="bg-gray-100 shadow-md rounded-lg p-6 flex flex-col items-center w-36 h-36 hover:bg-gray-200 transition">
+                <FaEnvelope className="text-red-500 text-5xl" />
+                <h4 className="text-lg font-semibold mt-3">Email</h4>
+              </a>
 
-    {/* Medium */}
-    <a href="https://medium.com/@dineshpriyantha" target="_blank" rel="noopener noreferrer" className="bg-gray-100 shadow-md rounded-lg p-6 flex flex-col items-center w-36 h-36 hover:bg-gray-200 transition">
-      <FaMedium className="text-green-600 text-5xl" />
-      <h4 className="text-lg font-semibold mt-3">Medium</h4>
-    </a>
+              {/* Medium */}
+              <a href="https://medium.com/@dineshpriyantha" target="_blank" rel="noopener noreferrer" className="bg-gray-100 shadow-md rounded-lg p-6 flex flex-col items-center w-36 h-36 hover:bg-gray-200 transition">
+                <FaMedium className="text-green-600 text-5xl" />
+                <h4 className="text-lg font-semibold mt-3">Medium</h4>
+              </a>
 
-  </div>
-</div>
+            </div>
+          </motion.div>
 
           {/* Right Side: Contact Form */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          >
             <h3 className="text-2xl font-semibold mb-6 text-center md:text-left">Contact Me</h3>
             <form onSubmit={onSubmit} className="bg-gray-50 shadow-md rounded-lg p-3">
               
@@ -109,35 +133,33 @@ const Contact = () => {
                 <p className="text-center text-green-600 mt-4">{result}</p>
               )}
             </form>
-          </div>
+          </motion.div>
 
         </div>
 
         {/* Contact Icons (Only visible on small screens) */}
         <div className="mt-10 flex justify-center gap-4 md:hidden">
-  
-  {/* LinkedIn */}
-  <a href="https://www.linkedin.com/in/dinesh-priyantha" target="_blank" rel="noopener noreferrer" className="bg-gray-100 shadow-md rounded-lg p-4 flex flex-col items-center w-24 h-24 hover:bg-gray-200 transition">
-    <FaLinkedin className="text-blue-600 text-3xl" />
-    <h4 className="text-sm font-semibold mt-2">LinkedIn</h4>
-  </a>
+          {/* LinkedIn */}
+          <a href="https://www.linkedin.com/in/dinesh-priyantha" target="_blank" rel="noopener noreferrer" className="bg-gray-100 shadow-md rounded-lg p-4 flex flex-col items-center w-24 h-24 hover:bg-gray-200 transition">
+            <FaLinkedin className="text-blue-600 text-3xl" />
+            <h4 className="text-sm font-semibold mt-2">LinkedIn</h4>
+          </a>
 
-  {/* Email */}
-  <a href="mailto:dineshpriyantha200248@gmail.com" className="bg-gray-100 shadow-md rounded-lg p-4 flex flex-col items-center w-24 h-24 hover:bg-gray-200 transition">
-    <FaEnvelope className="text-red-500 text-3xl" />
-    <h4 className="text-sm font-semibold mt-2">Email</h4>
-  </a>
+          {/* Email */}
+          <a href="mailto:dineshpriyantha200248@gmail.com" className="bg-gray-100 shadow-md rounded-lg p-4 flex flex-col items-center w-24 h-24 hover:bg-gray-200 transition">
+            <FaEnvelope className="text-red-500 text-3xl" />
+            <h4 className="text-sm font-semibold mt-2">Email</h4>
+          </a>
 
-  {/* Medium */}
-  <a href="https://medium.com/@dineshpriyantha" target="_blank" rel="noopener noreferrer" className="bg-gray-100 shadow-md rounded-lg p-4 flex flex-col items-center w-24 h-24 hover:bg-gray-200 transition">
-    <FaMedium className="text-green-600 text-3xl" />
-    <h4 className="text-sm font-semibold mt-2">Medium</h4>
-  </a>
+          {/* Medium */}
+          <a href="https://medium.com/@dineshpriyantha" target="_blank" rel="noopener noreferrer" className="bg-gray-100 shadow-md rounded-lg p-4 flex flex-col items-center w-24 h-24 hover:bg-gray-200 transition">
+            <FaMedium className="text-green-600 text-3xl" />
+            <h4 className="text-sm font-semibold mt-2">Medium</h4>
+          </a>
 
-</div>
+        </div>
 
-
-      </div>
+      </motion.div>
     </div>
   );
 };
