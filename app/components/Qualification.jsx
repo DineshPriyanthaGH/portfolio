@@ -92,8 +92,8 @@ const Qualification = () => {
             {sections[activeTab].map((item, index) => (
               <SwiperSlide key={index} className="p-6 bg-white rounded-lg shadow-md">
                 <motion.div
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1, delay: index * 0.2 }}
                 >
                   <h3 className="text-xl font-semibold">{item.title}</h3>
