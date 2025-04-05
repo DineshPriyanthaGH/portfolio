@@ -3,6 +3,35 @@ import Image from "next/image";
 import { assets } from "@/assets/assets";
 import { FaFacebookF, FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
 
+/* Bubble Background Component */
+const BubbleBackground = () => {
+  const bubbles = new Array(20).fill(0);
+
+  return (
+    <div className="fixed top-0 left-0 w-full h-screen -z-20 overflow-hidden pointer-events-none">
+      {bubbles.map((_, i) => {
+        const size = Math.random() * 40 + 10;
+        const left = Math.random() * 100;
+        const duration = Math.random() * 10 + 5;
+        const delay = Math.random() * 10;
+
+        return (
+          <div
+            key={i}
+            className="absolute bottom-0 bg-white rounded-full opacity-20"
+            style={{
+              width: `${size}px`,
+              height: `${size}px`,
+              left: `${left}%`,
+              animation: `floatBubble ${duration}s linear ${delay}s infinite`,
+            }}
+          />
+        );
+      })}
+    </div>
+  );
+};
+
 const Navbar = () => {
   const sideMenuRef = useRef();
   const [darkMode, setDarkMode] = useState(false);
@@ -22,6 +51,9 @@ const Navbar = () => {
 
   return (
     <div>
+      {/* Bubble Background */}
+      <BubbleBackground />
+
       {/* Background Image */}
       <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
         <Image src={assets.header_bg_color} className="w-full" alt="" />
@@ -69,7 +101,6 @@ const Navbar = () => {
 
         {/* Right Section */}
         <div className="flex items-center gap-4">
-          {/* Dark Mode Toggle */}
           <button onClick={toggleDarkMode}>
             <Image
               src={darkMode ? assets.sun_icon : assets.moon_icon}
@@ -77,8 +108,6 @@ const Navbar = () => {
               className="w-6"
             />
           </button>
-
-          {/* Contact Button */}
           <a
             href="#contact"
             className="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4"
@@ -86,8 +115,6 @@ const Navbar = () => {
             Contact
             <Image src={assets.arrow_icon} className="w-3" alt="contact" />
           </a>
-
-          {/* Mobile Menu Button */}
           <button className="block md:hidden ml-3" onClick={openMenu}>
             <Image src={assets.menu_black} alt="" className="w-6" />
           </button>
@@ -129,7 +156,7 @@ const Navbar = () => {
         </ul>
       </nav>
 
-      {/* Social Media Links on Left Side */}
+      {/* Social Media Links */}
       <div className="fixed left-5 top-1/2 transform -translate-y-1/2 flex flex-col gap-4 z-50">
         <SocialLink href="https://facebook.com" icon={<FaFacebookF />} label="Facebook" />
         <SocialLink href="https://linkedin.com" icon={<FaLinkedinIn />} label="LinkedIn" />
@@ -140,7 +167,6 @@ const Navbar = () => {
   );
 };
 
-/* Social Link Component */
 const SocialLink = ({ href, icon, label }) => {
   return (
     <a
@@ -149,11 +175,9 @@ const SocialLink = ({ href, icon, label }) => {
       rel="noopener noreferrer"
       className="group relative flex items-center gap-2 text-white hover:text-gray-900 transition-all"
     >
-      {/* Text Label (Expands on Hover) */}
       <span className="absolute left-10 opacity-0 group-hover:opacity-100 bg-white text-black px-3 py-1 rounded-md transition-opacity">
         {label}
       </span>
-      {/* Icon */}
       <div className="w-10 h-10 flex items-center justify-center bg-black text-white rounded-full transition-transform group-hover:scale-110">
         {icon}
       </div>

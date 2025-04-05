@@ -1,10 +1,24 @@
 @import "tailwindcss";
 
-
-*{
+* {
   font-family: Outfit;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* BUBBLE ANIMATION */
+@keyframes floatBubble {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.2);
+    opacity: 0;
+  }
 }
