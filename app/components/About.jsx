@@ -28,7 +28,7 @@ const About = () => {
       >
         {/* Lottie Animation Card */}
         <motion.div
-          className="w-[700px] h-[700px] sm:w-[100px] sm:h-[100px] md:w-[300px] md:h-[300px] lg:w-[600px] lg:h-[600px] flex justify-center items-center"
+          className="w-[250px] h-[250px] sm:w-[200px] sm:h-[200px] md:w-[300px] md:h-[300px] lg:w-[600px] lg:h-[600px] flex justify-center items-center"
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
@@ -48,7 +48,7 @@ const About = () => {
           transition={{ duration: 1 }}
         >
           <h3 className="text-2xl font-semibold text-center mb-4">
-            Hello, I'm [Your Name]
+            Hello, I'm Dinesh
           </h3>
           <p className="text-lg text-gray-700 mb-4">
             I am an undergraduate student currently pursuing a Bachelor's
