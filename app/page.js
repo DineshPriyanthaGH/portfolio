@@ -1,3 +1,4 @@
+// app/page.js
 'use client';
 
 import Header from "./components/Header";
@@ -9,18 +10,17 @@ import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-
 export default function Home() {
   return (
-   <>
-   < Navbar/>
-   <Header/>
-   < About/>
-   <Skills/>
-   <Qualification/>
-   <Portfolio/>
-   <Contact/>
-   <Footer/>
-   </>
+    <>
+      <Navbar />
+      <Header />
+      <About />
+      <Skills />
+      <Qualification />
+      <Portfolio />
+      <Contact />
+      <Footer />
+    </>
   );
 }

@@ -1,4 +1,6 @@
-// components/CanvasBackground.js
+// components/CanvasBackground.jsx
+'use client'; // This ensures the component is rendered on the client side
+
 import { useEffect } from 'react';
 
 const CanvasBackground = () => {

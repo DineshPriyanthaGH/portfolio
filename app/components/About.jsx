@@ -7,11 +7,11 @@ const About = () => {
   return (
     <div id="about" className="w-full px-6 md:px-[10%] py-10 scroll-mt-20">
       {/* Section Title */}
-      <h2 className="text-center text-4xl font-bold mb-6">About Me</h2>
+      <h2 className="text-center text-4xl font-bold mb-6">ABOUT ME</h2>
      {/* Introduction Card */}
 <div className="flex flex-col lg:flex-row items-center gap-12 my-16">
   {/* Lottie Animation Card */}
-  <div className="w-[700px] h-[700px] sm:w-[180px] sm:h-[180px] md:w-[240px] md:h-[240px] lg:w-[600px] lg:h-[600px] flex justify-center items-center">
+  <div className="w-[700px] h-[700px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] flex justify-center items-center">
     <DotLottieReact
       src="https://lottie.host/81cbd9f9-ce6c-42ff-8ec5-d7ab90c2d153/JcVq2XUuGO.json"
       loop
